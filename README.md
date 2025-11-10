@@ -539,13 +539,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 👨‍💻 Authors
+## 👨‍💻 Author
 
-- **Original Developer**: Motion Detector Team
+- **Developer**: Mahmoud Tolba (Solo Developer)
+- **GitHub**: [@mahmoudtolba-tech](https://github.com/mahmoudtolba-tech)
 - **Version**: 2.0.0
 - **Year**: 2024
-
----
 
 ## 🙏 Acknowledgments
 
