@@ -552,15 +552,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - CustomTkinter for modern GUI components
 - All contributors and users
 
----
-
-## 📞 Support
-
-For support, questions, or feature requests:
-
-- 📧 Email: support@motiondetector.example
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/motion-detector/issues)
-- 📖 Documentation: This README and inline code comments
 
 ---
 
