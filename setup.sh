@@ -39,6 +39,23 @@ if [ "$PYTHON_MAJOR" -lt 3 ] || ([ "$PYTHON_MAJOR" -eq 3 ] && [ "$PYTHON_MINOR" 
     exit 1
 fi
 
+# Check for tkinter (required system dependency)
+echo -e "${BLUE}Checking for tkinter...${NC}"
+if ! python3 -c "import tkinter" 2>/dev/null; then
+    echo -e "${YELLOW}⚠${NC}  Warning: tkinter is not installed!"
+    echo -e "${YELLOW}   This is required for the GUI. Install it with:${NC}"
+    echo "   sudo apt-get install python3-tk"
+    echo ""
+    read -p "Continue anyway? (y/N): " -n 1 -r
+    echo ""
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        exit 1
+    fi
+else
+    echo -e "${GREEN}✓${NC} tkinter is installed"
+fi
+echo ""
+
 # Create virtual environment
 echo -e "${BLUE}[2/6]${NC} Creating virtual environment..."
 if [ -d "venv" ]; then

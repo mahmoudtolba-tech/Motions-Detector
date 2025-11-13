@@ -47,11 +47,16 @@ echo ""
 
 # Check if dependencies are installed
 echo -e "${BLUE}[2/3]${NC} Checking dependencies..."
-python3 -c "import cv2, customtkinter, pandas, matplotlib" 2>/dev/null
+ERROR_OUTPUT=$(python3 -c "import cv2, customtkinter, pandas, matplotlib" 2>&1)
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}✗${NC} Some dependencies are missing!"
-    echo -e "${YELLOW}Please run setup.sh to install dependencies${NC}"
+    echo -e "${RED}Error:${NC} $ERROR_OUTPUT"
+    echo ""
+    echo -e "${YELLOW}If you see 'No module named tkinter', install it with:${NC}"
+    echo "  sudo apt-get install python3-tk"
+    echo ""
+    echo -e "${YELLOW}For other missing packages, try running setup.sh again${NC}"
     exit 1
 fi
 
